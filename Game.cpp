@@ -6,6 +6,7 @@
 #include <termios.h>
 #include <unistd.h>
 #include <fcntl.h>
+
 using namespace std;
 class cPlayer{
 public:
@@ -104,7 +105,7 @@ public:
                 }
                 if(map[i]->CheckPos(j) && i != 0 && i != numberOfLanes-1){
                     usleep(50);
-                    mvprintw(i,j,"#");
+                    mvprintw(i,j,"@");
                     refresh();
                 }
                 else if(player->x == j && player->y == i){
